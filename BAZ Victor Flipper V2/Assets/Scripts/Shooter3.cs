@@ -12,6 +12,11 @@ public class Shooter3 : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyUp(key))
+        {
+            rb.isKinematic = false;
+        }
+        
         if (Input.GetKey(key))
         {
             rb.isKinematic = false;
@@ -28,21 +33,15 @@ public class Shooter3 : MonoBehaviour
         }
         else
         {
-            if (transform.localPosition.y <= 0)
+            if (transform.localPosition.y < 0)
             {
-                rb.velocity += transform.up * accel;
+                rb.velocity    += transform.up * accel;
             }
             else
             {
-                rb.velocity             = Vector3.zero;
-                transform.localPosition = Vector3.zero;
                 rb.isKinematic          = true;
+                transform.localPosition = Vector3.zero;
             }
-        }
-
-        if (Input.GetKeyUp(key))
-        {
-            rb.isKinematic = false;
         }
 
         transform.localPosition = new Vector3(0, transform.localPosition.y, 0);

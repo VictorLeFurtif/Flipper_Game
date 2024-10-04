@@ -23,7 +23,9 @@ public class DeathZone : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (currentLife > 0 )
-        {other.transform.position = new Vector3(10.508f, 8.003f, 0.005f);
+        {
+            other.transform.position = new Vector3(10.508f, 8.003f, 0.005f);
+          
             currentLife = currentLife - damage;
             if (currentHeart == 3)
             {
