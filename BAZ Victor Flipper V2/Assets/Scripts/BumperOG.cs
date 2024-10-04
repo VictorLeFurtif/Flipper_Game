@@ -7,6 +7,7 @@ public class BumperOG : MonoBehaviour
 {
     public float strength = 1;
     public Animation anim;
+    public AudioSource audio;
     private void OnCollisionEnter(Collision collision)
     
     {
@@ -14,6 +15,7 @@ public class BumperOG : MonoBehaviour
         collision.rigidbody.AddForce(force);
         
         anim.Play("Maki Bump");
+        audio.Play();
     }
 
     // Start is called before the first frame update

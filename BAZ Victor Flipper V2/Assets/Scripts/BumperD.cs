@@ -6,6 +6,7 @@ public class BumperD : MonoBehaviour
 {
     public float strength = 1;
     public Animation anim;
+    public AudioSource audio;
     private void OnCollisionEnter(Collision collision)
     
     {
@@ -13,6 +14,7 @@ public class BumperD : MonoBehaviour
         collision.rigidbody.AddForce(force);
         
         anim.Play("Donut Animation");
+        audio.Play();
     }
 
     // Start is called before the first frame update
