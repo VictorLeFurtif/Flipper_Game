@@ -10,9 +10,6 @@ public class Load_menu_back : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void LoadNextInBuild()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    
     
 }

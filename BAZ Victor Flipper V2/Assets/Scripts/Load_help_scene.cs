@@ -9,10 +9,6 @@ public class Load_help_scene : MonoBehaviour
     {
         SceneManager.LoadScene("Menu_Help");
     }
-
-    public void LoadNextInBuild()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    
     
 }

@@ -14,11 +14,12 @@ public class DeathZone : MonoBehaviour
     public GameObject heart2;
     public GameObject heart3;
     public int currentHeart = 3;
+    public GameObject bwFilter;
+    public GameObject gameOvertxt;
+    public GameObject buttonRestart;
+    public GameObject buttonMenu;
     
-    public void LoadsceneByName()
-    {
-        SceneManager.LoadScene("Game_Over");
-    }
+    
     
     void OnTriggerEnter(Collider other)
     {
@@ -44,7 +45,10 @@ public class DeathZone : MonoBehaviour
         {
             heart1.gameObject.SetActive((false));
             Destroy(other.gameObject);
-            LoadsceneByName();
+            bwFilter.SetActive(true);
+            gameOvertxt.SetActive(true);
+            buttonMenu.SetActive(true);
+            buttonRestart.SetActive(true);
 
         }
         
