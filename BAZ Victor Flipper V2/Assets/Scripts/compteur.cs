@@ -9,22 +9,19 @@ public class compteur : MonoBehaviour
 
 {
     public int currentValueCounter = 0;
-    private int donutPoint = 200;
-    private int pizzaPoint = 100;
-    private int salamiPoint = 500;
-    private int makiPoint = 500;
-    public TextMeshPro text_Pv;
+    public GameObject scoreText;
     
     
     
     void Start()
     {
-        
+        scoreText.GetComponent<TMP_Text>().text = "Score : " + currentValueCounter;
     }
 
-    // Update is called once per frame
-    private void OnCollisionEnter(Collision other)
+    public void UpdateScore(int points)
     {
-        
+        currentValueCounter = currentValueCounter + points;
+        scoreText.GetComponent<TMP_Text>().text = "Score : " + currentValueCounter;
     }
+    
 }

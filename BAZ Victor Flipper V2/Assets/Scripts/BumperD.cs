@@ -7,6 +7,8 @@ public class BumperD : MonoBehaviour
     public float strength = 1;
     public Animation anim;
     public AudioSource audio;
+    public compteur cpt;
+    public int pointsvalue = 500;
     private void OnCollisionEnter(Collision collision)
     
     {
@@ -15,17 +17,8 @@ public class BumperD : MonoBehaviour
         
         anim.Play("Donut Animation");
         audio.Play();
+        cpt.UpdateScore(pointsvalue);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

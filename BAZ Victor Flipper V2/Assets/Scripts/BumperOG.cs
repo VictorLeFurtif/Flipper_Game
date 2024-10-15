@@ -8,6 +8,8 @@ public class BumperOG : MonoBehaviour
     public float strength = 1;
     public Animation anim;
     public AudioSource audio;
+    public compteur cpt;
+    public int pointsvalue = 100;
     private void OnCollisionEnter(Collision collision)
     
     {
@@ -16,17 +18,8 @@ public class BumperOG : MonoBehaviour
         
         anim.Play("Maki Bump");
         audio.Play();
+        cpt.UpdateScore(pointsvalue);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 }

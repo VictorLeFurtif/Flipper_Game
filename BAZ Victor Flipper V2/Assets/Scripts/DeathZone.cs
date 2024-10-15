@@ -25,7 +25,10 @@ public class DeathZone : MonoBehaviour
     {
         if (currentLife > 0 )
         {
+            other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            other.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             other.transform.position = new Vector3(10.508f, 8.003f, 0.005f);
+            
           
             currentLife = currentLife - damage;
             if (currentHeart == 3)
