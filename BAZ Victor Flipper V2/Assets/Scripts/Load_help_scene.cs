@@ -8,6 +8,7 @@ public class Load_help_scene : MonoBehaviour
     public void LoadsceneByName()
     {
         SceneManager.LoadScene("Menu_Help");
+        Time.timeScale = 1;
     }
     
     

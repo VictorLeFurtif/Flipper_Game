@@ -15,13 +15,13 @@ public class compteur : MonoBehaviour
     
     void Start()
     {
-        scoreText.GetComponent<TMP_Text>().text = "Score : " + currentValueCounter;
+        scoreText.GetComponent<TMP_Text>().text = ""+currentValueCounter;
     }
 
     public void UpdateScore(int points)
     {
         currentValueCounter = currentValueCounter + points;
-        scoreText.GetComponent<TMP_Text>().text = "Score : " + currentValueCounter;
+        scoreText.GetComponent<TMP_Text>().text = ""+currentValueCounter;
     }
     
 }

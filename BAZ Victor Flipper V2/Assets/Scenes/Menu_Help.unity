@@ -475,6 +475,10 @@ MonoBehaviour:
   heart2: {fileID: 0}
   heart3: {fileID: 0}
   currentHeart: 3
+  bwFilter: {fileID: 0}
+  gameOvertxt: {fileID: 0}
+  buttonRestart: {fileID: 0}
+  buttonMenu: {fileID: 0}
 --- !u!65 &35895497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -600,9 +604,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 67391613}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -879.5, y: 438.8}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 75, y: -60.200012}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45038138
@@ -1262,6 +1266,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 1000
   anim: {fileID: 176353146}
+  audio: {fileID: 0}
+  cpt: {fileID: 0}
+  pointsvalue: 200
 --- !u!4 &176353148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3342338530707967412, guid: 4996cb7e38e19d34f8d3c4c05aa9ad48,
@@ -1396,6 +1403,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 500
   anim: {fileID: 198560949}
+  audio: {fileID: 0}
+  cpt: {fileID: 0}
+  pointsvalue: 500
 --- !u!65 &198560948
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3514,6 +3524,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 1000
   anim: {fileID: 445249397}
+  audio: {fileID: 0}
+  cpt: {fileID: 0}
+  pointsvalue: 200
 --- !u!65 &445249396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3975,6 +3988,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 500
   anim: {fileID: 519442083}
+  audio: {fileID: 0}
+  cpt: {fileID: 0}
+  pointsvalue: 500
 --- !u!4 &519442090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3990576710844553890, guid: e4f3387dd249a6f42b208bdf329867b1,
@@ -4885,6 +4901,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 1000
   anim: {fileID: 786226297}
+  audio: {fileID: 0}
+  cpt: {fileID: 0}
+  pointsvalue: 200
 --- !u!4 &786226299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3342338530707967412, guid: 4996cb7e38e19d34f8d3c4c05aa9ad48,
@@ -8491,6 +8510,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 750
   anim: {fileID: 1569711589}
+  audio: {fileID: 0}
+  cpt: {fileID: 0}
+  pointsvalue: 100
 --- !u!111 &1569711589
 Animation:
   m_ObjectHideFlags: 0
@@ -8961,6 +8983,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 1000
   anim: {fileID: 1625051726}
+  audio: {fileID: 0}
+  cpt: {fileID: 0}
+  pointsvalue: 200
 --- !u!111 &1625051726
 Animation:
   m_ObjectHideFlags: 0
@@ -10379,6 +10404,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 750
   anim: {fileID: 1957677859}
+  audio: {fileID: 0}
+  cpt: {fileID: 0}
+  pointsvalue: 100
 --- !u!111 &1957677859
 Animation:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class Load_menu_back : MonoBehaviour
     public void LoadsceneByName()
     {
         SceneManager.LoadScene("Menu");
+        Time.timeScale = 1;
+        
     }
 
     

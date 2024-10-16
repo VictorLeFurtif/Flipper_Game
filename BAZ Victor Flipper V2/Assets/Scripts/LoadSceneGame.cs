@@ -8,6 +8,7 @@ public class LoadSceneGame : MonoBehaviour
    public void LoadsceneByName()
    {
       SceneManager.LoadScene("Game");
+      Time.timeScale = 1;
    }
 
    

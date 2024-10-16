@@ -13,36 +13,37 @@ public class DeathZone : MonoBehaviour
     public GameObject heart1;
     public GameObject heart2;
     public GameObject heart3;
-    public int currentHeart = 3;
     public GameObject bwFilter;
     public GameObject gameOvertxt;
     public GameObject buttonRestart;
     public GameObject buttonMenu;
+    public AudioSource audio;
+    public AudioSource audio1;
+    public ScreenShacker sShake;
     
     
     
     void OnTriggerEnter(Collider other)
     {
-        if (currentLife > 0 )
+        if (currentLife > 1 )
         {
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
             other.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             other.transform.position = new Vector3(10.508f, 8.003f, 0.005f);
+            ScreenShacker.instance.Shake(2,1);
             
-          
-            currentLife = currentLife - damage;
-            if (currentHeart == 3)
+            
+            
+            if (currentLife == 3)
             {
                 heart3.gameObject.SetActive((false));
             }
 
-            if (currentHeart == 2) 
+            if (currentLife == 2) 
             {
                     heart2.gameObject.SetActive((false)); 
             }
-            
-
-            currentHeart = currentHeart - damage;
+            currentLife = currentLife - damage;
         }
         else
         {
@@ -52,6 +53,9 @@ public class DeathZone : MonoBehaviour
             gameOvertxt.SetActive(true);
             buttonMenu.SetActive(true);
             buttonRestart.SetActive(true);
+            audio.Stop();
+            audio1.Play();
+            
 
         }
         
@@ -59,15 +63,5 @@ public class DeathZone : MonoBehaviour
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
