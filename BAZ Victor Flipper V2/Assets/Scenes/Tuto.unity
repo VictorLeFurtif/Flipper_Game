@@ -1312,6 +1312,7 @@ GameObject:
   - component: {fileID: 652167753}
   - component: {fileID: 652167754}
   - component: {fileID: 652167755}
+  - component: {fileID: 652167756}
   m_Layer: 0
   m_Name: GameManageur
   m_TagString: Untagged
@@ -1403,6 +1404,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutoText: {fileID: 132682042}
   textGoal: {fileID: 577145567}
+--- !u!114 &652167756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652167749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c39f5f7e7f552054595040a71f3ff37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreForVictoryTuto: 4000
+  cpt: {fileID: 652167750}
 --- !u!1 &668587730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,8 +1740,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1381637144}
-        m_TargetAssemblyTypeName: LoadSceneGame, Assembly-CSharp
-        m_MethodName: LoadsceneByName
+        m_TargetAssemblyTypeName: MenuLevelLoadScene, Assembly-CSharp
+        m_MethodName: LoadsceneTuto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1783,7 +1798,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1381637139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c4ee11efe15ce842a8148d0c2bbee6e, type: 3}
+  m_Script: {fileID: 11500000, guid: ea54e353d77ceb34c9fe9a52d2472c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1546279129
