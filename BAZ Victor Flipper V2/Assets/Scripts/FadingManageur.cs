@@ -5,7 +5,7 @@ using UnityEngine;
 public class FadingManageur : MonoBehaviour
 {
     [SerializeField] Fondu fondu;
-    [SerializeField] Load_menu_back lmb;
+    [SerializeField] LoadSceneGame lmb;
     public void FadeIn()
     {
         fondu.Fade();
@@ -15,6 +15,6 @@ public class FadingManageur : MonoBehaviour
     IEnumerator WaitAndLaunch()
     {
         yield return new WaitForSecondsRealtime(2);
-        lmb.LoadsceneByName();
+        lmb.LoadsMenu();
     }
 }

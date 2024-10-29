@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 67391611}
   - component: {fileID: 67391610}
   - component: {fileID: 67391614}
-  - component: {fileID: 67391615}
   m_Layer: 5
   m_Name: CANVA
   m_TagString: Untagged
@@ -238,18 +237,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c4ee11efe15ce842a8148d0c2bbee6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &67391615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67391609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfdbef2fb2674414d94d52853e59e0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &295631135
@@ -683,7 +670,6 @@ GameObject:
   - component: {fileID: 1011976697}
   - component: {fileID: 1011976696}
   - component: {fileID: 1011976695}
-  - component: {fileID: 1011976694}
   m_Layer: 5
   m_Name: Button_Menu
   m_TagString: Untagged
@@ -711,18 +697,6 @@ RectTransform:
   m_AnchoredPosition: {x: -9.8, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1011976694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011976692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22c36036b021db841a6cbd6f6dc5a6cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1011976695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,9 +741,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1011976694}
-        m_TargetAssemblyTypeName: Load_menu_back, Assembly-CSharp
-        m_MethodName: LoadsceneByName
+      - m_Target: {fileID: 67391614}
+        m_TargetAssemblyTypeName: LoadSceneGame, Assembly-CSharp
+        m_MethodName: LoadsMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

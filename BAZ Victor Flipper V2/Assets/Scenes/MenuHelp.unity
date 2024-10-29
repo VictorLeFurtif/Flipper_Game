@@ -584,6 +584,7 @@ GameObject:
   - component: {fileID: 45038137}
   - component: {fileID: 45038140}
   - component: {fileID: 45038139}
+  - component: {fileID: 45038141}
   - component: {fileID: 45038138}
   m_Layer: 5
   m_Name: Back_to_menu
@@ -655,9 +656,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 67391615}
-        m_TargetAssemblyTypeName: Load_menu_back, Assembly-CSharp
-        m_MethodName: LoadsceneByName
+      - m_Target: {fileID: 45038141}
+        m_TargetAssemblyTypeName: LoadSceneGame, Assembly-CSharp
+        m_MethodName: LoadsMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -705,6 +706,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45038136}
   m_CullTransparentMesh: 1
+--- !u!114 &45038141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45038136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4ee11efe15ce842a8148d0c2bbee6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &67391609
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +731,6 @@ GameObject:
   - component: {fileID: 67391611}
   - component: {fileID: 67391610}
   - component: {fileID: 67391614}
-  - component: {fileID: 67391615}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -826,18 +838,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c4ee11efe15ce842a8148d0c2bbee6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &67391615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67391609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22c36036b021db841a6cbd6f6dc5a6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &74760467 stripped
