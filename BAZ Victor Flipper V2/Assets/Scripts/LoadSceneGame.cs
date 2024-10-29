@@ -7,7 +7,7 @@ public class LoadSceneGame : MonoBehaviour
 {
    public void LoadsceneByName()
    {
-      SceneManager.LoadScene("Tuto");
+      SceneManager.LoadScene("Menu_Level");
       Time.timeScale = 1;
    }
 

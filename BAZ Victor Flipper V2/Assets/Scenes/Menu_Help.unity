@@ -474,11 +474,13 @@ MonoBehaviour:
   heart1: {fileID: 0}
   heart2: {fileID: 0}
   heart3: {fileID: 0}
-  currentHeart: 3
   bwFilter: {fileID: 0}
   gameOvertxt: {fileID: 0}
   buttonRestart: {fileID: 0}
   buttonMenu: {fileID: 0}
+  audio: {fileID: 0}
+  audio1: {fileID: 0}
+  sShake: {fileID: 0}
 --- !u!65 &35895497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1269,6 +1271,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 200
+  particlePrefab: {fileID: 0}
 --- !u!4 &176353148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3342338530707967412, guid: 4996cb7e38e19d34f8d3c4c05aa9ad48,
@@ -1406,6 +1409,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 500
+  particlePrefab: {fileID: 0}
 --- !u!65 &198560948
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1484,7 +1488,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -208, y: 169}
+  m_AnchoredPosition: {x: 30, y: 169}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &200248774
@@ -1891,7 +1895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -201, y: 2}
+  m_AnchoredPosition: {x: 36, y: 2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &246623622
@@ -2969,7 +2973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -437, y: 165}
+  m_AnchoredPosition: {x: -199, y: 165}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &382975872
@@ -3527,6 +3531,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 200
+  particlePrefab: {fileID: 0}
 --- !u!65 &445249396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3991,6 +3996,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 500
+  particlePrefab: {fileID: 0}
 --- !u!4 &519442090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3990576710844553890, guid: e4f3387dd249a6f42b208bdf329867b1,
@@ -4904,6 +4910,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 200
+  particlePrefab: {fileID: 0}
 --- !u!4 &786226299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3342338530707967412, guid: 4996cb7e38e19d34f8d3c4c05aa9ad48,
@@ -5237,7 +5244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440, y: -4}
+  m_AnchoredPosition: {x: -203, y: -4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &847809895
@@ -5673,7 +5680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -439, y: -162.7}
+  m_AnchoredPosition: {x: -201, y: -162.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893408076
@@ -7314,7 +7321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -201, y: -179}
+  m_AnchoredPosition: {x: 37, y: -179}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219858242
@@ -8513,6 +8520,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 100
+  particlePrefab: {fileID: 0}
 --- !u!111 &1569711589
 Animation:
   m_ObjectHideFlags: 0
@@ -8986,6 +8994,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 200
+  particlePrefab: {fileID: 0}
 --- !u!111 &1625051726
 Animation:
   m_ObjectHideFlags: 0
@@ -10407,6 +10416,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 100
+  particlePrefab: {fileID: 0}
 --- !u!111 &1957677859
 Animation:
   m_ObjectHideFlags: 0
