@@ -11,9 +11,5 @@ public class menuManagerUI : MonoBehaviour
         fondu.Fade();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

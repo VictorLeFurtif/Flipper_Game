@@ -14,7 +14,7 @@ public class DeathZone : MonoBehaviour
     public GameObject buttonMenu;
     public AudioSource audio;
     public AudioSource audio1;
-    public ScreenShacker sShake;
+    
     
     
     

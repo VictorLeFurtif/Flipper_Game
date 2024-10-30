@@ -13,8 +13,15 @@ public class LoadSceneGame : MonoBehaviour
    public void LoadsceneGame()
    {
       SceneManager.LoadScene("Game");
+      Debug.Log("Test");
       Time.timeScale = 1;
    }
+   public void LoadingScene()
+   {
+      SceneManager.LoadScene("Chargement");
+      Time.timeScale = 1;
+   }
+    
    
    public void LoadsMenuHelp()
    {

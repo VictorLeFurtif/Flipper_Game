@@ -165,7 +165,6 @@ MonoBehaviour:
   buttonMenu: {fileID: 1725929386}
   audio: {fileID: 1998542097}
   audio1: {fileID: 188072698}
-  sShake: {fileID: 0}
 --- !u!65 &35895497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2016,6 +2015,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smoke
       objectReference: {fileID: 0}
+    - target: {fileID: 6716933543107358056, guid: 8a334e7c388e77347a1dddd727ef3446,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3151,6 +3155,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smoke (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6716933543107358056, guid: 8a334e7c388e77347a1dddd727ef3446,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3537,6 +3546,11 @@ PrefabInstance:
       propertyPath: cpt
       value: 
       objectReference: {fileID: 652167750}
+    - target: {fileID: 6865363085071031149, guid: 8934a5ee7a2698847ae0a9b385bdb72b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7213573825771213254, guid: 8934a5ee7a2698847ae0a9b385bdb72b,
         type: 3}
       propertyPath: m_PlayAutomatically
