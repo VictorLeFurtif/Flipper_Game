@@ -25,7 +25,7 @@ public class LoadSceneGame : MonoBehaviour
    
    public void LoadsMenuHelp()
    {
-      SceneManager.LoadScene("MenuHelp");
+      SceneManager.LoadScene("MenuHelpNew");
       Time.timeScale = 1;
    }
    public void LoadsMenu()
