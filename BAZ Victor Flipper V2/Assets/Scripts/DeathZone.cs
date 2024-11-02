@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class DeathZone : MonoBehaviour
@@ -14,7 +15,10 @@ public class DeathZone : MonoBehaviour
     public GameObject buttonMenu;
     public AudioSource audio;
     public AudioSource audio1;
-    
+    public compteur cpt;
+    public GameObject compteurText;
+    public GameObject gameoverTextMax;
+    public PlayerSaveScore pss;
     
     
     
@@ -42,10 +46,15 @@ public class DeathZone : MonoBehaviour
         }
         else
         {
+            pss.WhenDie();
             heart1.gameObject.SetActive((false));
             Destroy(other.gameObject);
             bwFilter.SetActive(true);
             gameOvertxt.SetActive(true);
+            gameOvertxt.GetComponent<TMP_Text>().text = "your score is : "+cpt.currentValueCounter;
+            compteurText.SetActive(false);
+            gameoverTextMax.SetActive(true);
+            gameoverTextMax.GetComponent<TMP_Text>().text = "your Highest score is : "+pss.score;
             buttonMenu.SetActive(true);
             buttonRestart.SetActive(true);
             audio.Stop();
