@@ -18,7 +18,7 @@ public class Bumper : MonoBehaviour
         collision.rigidbody.AddForce(force);
         GameObject particuleInstance = Instantiate(particlePrefab, collision.contacts[0].point, Quaternion.identity, null);
         Destroy(particuleInstance, 1);
-        anim.Play("Bumper Bump");
+        anim.Play();
         audio.Play();
         cpt.UpdateScore(pointsvalue);
     }

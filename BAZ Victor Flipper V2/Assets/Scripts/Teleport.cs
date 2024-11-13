@@ -1,22 +1,57 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Teleport : MonoBehaviour
 {
+    public GameObject objectWhereToTp;
+    public Animation animCam;
+    public GameObject ball;
+    
     void OnTriggerEnter(Collider other)
     {
-        other.transform.position = new Vector3(-8.848f, 27.186f, 0.005f);
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        other.transform.position = new Vector3(objectWhereToTp.transform.position.x, objectWhereToTp.transform.position.y, objectWhereToTp.transform.position.z);
+        other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        other.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        animCam.Play();
+        StartCoroutine(WaitForTimeScale(other));
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator WaitForTimeScale(Collider other)
     {
         
+        yield return new WaitForSecondsRealtime(2);
+        other.gameObject.GetComponent<MeshRenderer>().enabled = true;
+        other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-3,3),0,0),ForceMode.Impulse);
+        
+    }
+    IEnumerator WaitForTimeScaleTwo(GameObject other)
+    {
+        
+        yield return new WaitForSecondsRealtime(2);
+        other.gameObject.GetComponent<MeshRenderer>().enabled = true;
+        other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-3,3),0,0),ForceMode.Impulse);
+        
+    }
+    
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            ball.transform.position = new Vector3(objectWhereToTp.transform.position.x, objectWhereToTp.transform.position.y, objectWhereToTp.transform.position.z);
+            ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            ball.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            ball.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            ball.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            animCam.Play();
+            StartCoroutine(WaitForTimeScaleTwo(ball));
+        }
     }
 }

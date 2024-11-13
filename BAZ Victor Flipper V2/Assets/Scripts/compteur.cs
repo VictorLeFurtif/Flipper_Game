@@ -10,18 +10,21 @@ public class compteur : MonoBehaviour
 {
     public int currentValueCounter = 0;
     public GameObject scoreText;
+    public GameObject secondScoreText;
     
     
     
     void Start()
     {
         scoreText.GetComponent<TMP_Text>().text = ""+currentValueCounter;
+        secondScoreText.GetComponent<TMP_Text>().text = ""+currentValueCounter;
     }
 
     public void UpdateScore(int points)
     {
         currentValueCounter = currentValueCounter + points;
         scoreText.GetComponent<TMP_Text>().text = ""+currentValueCounter;
+        secondScoreText.GetComponent<TMP_Text>().text = ""+currentValueCounter;
     }
     
 }
