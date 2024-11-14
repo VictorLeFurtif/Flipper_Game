@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerSaveScore : MonoBehaviour
 {
    public int score;
-   public compteur cpt;
+   public Compteur cpt;
    public void WhenDie()
    {
       if (PlayerPrefs.GetInt("Max Score") < cpt.currentValueCounter)

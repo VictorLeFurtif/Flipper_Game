@@ -6,10 +6,19 @@ using UnityEngine;
 public class AudioLoadingTroughtScene : MonoBehaviour
 {
    public AudioSource audioS;
-
+   public static AudioLoadingTroughtScene instance;
+   
    public void Awake()
    {
-	   DontDestroyOnLoad(gameObject);
+       if (instance == null)
+       {
+           instance = this;
+           DontDestroyOnLoad(gameObject);
+       }
+       else
+       {
+           Destroy(gameObject);
+       }
    }
    
 }

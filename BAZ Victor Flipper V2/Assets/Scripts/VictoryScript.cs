@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class VictoryScript : MonoBehaviour
 {
     public int scoreForVictoryTuto = 7000;
-    public compteur cpt;
+    public Compteur cpt;
     void Update()
     {
         if (cpt.currentValueCounter >= scoreForVictoryTuto)

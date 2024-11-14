@@ -6,8 +6,8 @@ public class BumperD : MonoBehaviour
 {
     public float strength = 1;
     public Animation anim;
-    public AudioSource audio;
-    public compteur cpt;
+    public AudioSource audioD;
+    public Compteur cpt;
     public int pointsvalue = 500;
     [SerializeField] GameObject particlePrefab;
     
@@ -19,7 +19,7 @@ public class BumperD : MonoBehaviour
         Destroy(particuleInstance, 1);
         
         anim.Play("Donut Animation");
-        audio.Play();
+        audioD.Play();
         cpt.UpdateScore(pointsvalue);
     }
 

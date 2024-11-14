@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class compteur : MonoBehaviour
+public class Compteur : MonoBehaviour
 
 {
     public int currentValueCounter = 0;

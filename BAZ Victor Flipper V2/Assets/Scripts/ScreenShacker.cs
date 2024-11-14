@@ -84,7 +84,7 @@ int   index;
 
   void ShakeIt(ScreenShake screenShake)
   {
-     Debug.Log("ShakeIt");
+    
 
      intensityCurveEvaluated = intensityCurve.Evaluate(screenShake.currentDuration / screenShake.duration);
 

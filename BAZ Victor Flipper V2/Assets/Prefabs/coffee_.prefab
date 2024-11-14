@@ -26,12 +26,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 82c07e27b554e34438df92494430dab3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5416214
+      value: -0.15675724
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82c07e27b554e34438df92494430dab3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.44
+      value: -2.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82c07e27b554e34438df92494430dab3,
         type: 3}
@@ -103,7 +103,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 82c07e27b554e34438df92494430dab3,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8288896000525863282}
+      addedObject: {fileID: 8981020515343091991}
   m_SourcePrefab: {fileID: 100100000, guid: 82c07e27b554e34438df92494430dab3, type: 3}
 --- !u!1 &4035757140535242221 stripped
 GameObject:
@@ -146,7 +146,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VfxBean: {fileID: 4897628633843154904, guid: da28274600390c14989bf1d391fd0ffb, type: 3}
---- !u!111 &8288896000525863282
+  delay: 10
+  audioCOffe: {fileID: 8758657662353560620, guid: 9a8d075272e7bd54cbc4dc2657b042f8,
+    type: 3}
+--- !u!111 &8981020515343091991
 Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

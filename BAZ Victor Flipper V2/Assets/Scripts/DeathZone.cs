@@ -13,9 +13,8 @@ public class DeathZone : MonoBehaviour
     public GameObject gameOvertxt;
     public GameObject buttonRestart;
     public GameObject buttonMenu;
-    public AudioSource audio;
-    public AudioSource audio1;
-    public compteur cpt;
+    
+    public Compteur cpt;
     public GameObject compteurText;
     public GameObject gameoverTextMax;
     public PlayerSaveScore pss;
@@ -57,8 +56,8 @@ public class DeathZone : MonoBehaviour
             gameoverTextMax.GetComponent<TMP_Text>().text = "your Highest score is : "+pss.score;
             buttonMenu.SetActive(true);
             buttonRestart.SetActive(true);
-            audio.Stop();
-            audio1.Play();
+            
+            
             
 
         }

@@ -7,8 +7,8 @@ public class Bumper : MonoBehaviour
 {
     public float strength = 1;
     public Animation anim;
-    public AudioSource audio;
-    public compteur cpt;
+    public AudioSource audioClas;
+    public Compteur cpt;
     public int pointsvalue = 200;
     [SerializeField] GameObject particlePrefab;
     
@@ -19,7 +19,7 @@ public class Bumper : MonoBehaviour
         GameObject particuleInstance = Instantiate(particlePrefab, collision.contacts[0].point, Quaternion.identity, null);
         Destroy(particuleInstance, 1);
         anim.Play();
-        audio.Play();
+        audioClas.Play();
         cpt.UpdateScore(pointsvalue);
     }
 }

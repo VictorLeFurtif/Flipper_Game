@@ -7,8 +7,8 @@ public class BumperOG : MonoBehaviour
 {
     public float strength = 1;
     public Animation anim;
-    public AudioSource audio;
-    public compteur cpt;
+    public AudioSource audioOG;
+    public Compteur cpt;
     public int pointsvalue = 100;
     [SerializeField] GameObject particlePrefab;
     
@@ -19,7 +19,7 @@ public class BumperOG : MonoBehaviour
         GameObject particuleInstance = Instantiate(particlePrefab, collision.contacts[0].point, Quaternion.identity, null);
         Destroy(particuleInstance, 1);
         anim.Play("Maki Bump");
-        audio.Play();
+        audioOG.Play();
         cpt.UpdateScore(pointsvalue);
     }
 
