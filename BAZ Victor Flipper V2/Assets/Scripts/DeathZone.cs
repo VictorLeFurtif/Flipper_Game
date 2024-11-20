@@ -7,13 +7,15 @@ public class DeathZone : MonoBehaviour
     public int damage = 1;
     public int currentLife = 3;
     public GameObject heart1;
+    public GameObject vfx1;
     public GameObject heart2;
+    public GameObject vfx2;
     public GameObject heart3;
+    public GameObject vfx3;
     public GameObject bwFilter;
     public GameObject gameOvertxt;
     public GameObject buttonRestart;
     public GameObject buttonMenu;
-    
     public Compteur cpt;
     public GameObject compteurText;
     public GameObject gameoverTextMax;
@@ -35,11 +37,13 @@ public class DeathZone : MonoBehaviour
             if (currentLife == 3)
             {
                 heart3.gameObject.SetActive((false));
+                vfx3.gameObject.SetActive(false);
             }
 
             if (currentLife == 2) 
             {
                     heart2.gameObject.SetActive((false)); 
+                    vfx2.gameObject.SetActive(false);
             }
             currentLife = currentLife - damage;
         }
@@ -56,6 +60,7 @@ public class DeathZone : MonoBehaviour
             gameoverTextMax.GetComponent<TMP_Text>().text = "your Highest score is : "+pss.score;
             buttonMenu.SetActive(true);
             buttonRestart.SetActive(true);
+            vfx1.SetActive(false);
             
             
             

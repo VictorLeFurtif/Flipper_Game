@@ -1,35 +1,35 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-public class Teleport : MonoBehaviour
+public class TeleportSink : MonoBehaviour
 {
     public GameObject objectWhereToTp;
     public Animation animCam;
-    public GameObject ball;
+    public SliderQTE sQte;
+   
 
 
     void OnTriggerEnter(Collider other)
     {
+        Rigidbody rb = other.GetComponent<Rigidbody>();
         other.transform.position = new Vector3(objectWhereToTp.transform.position.x,
             objectWhereToTp.transform.position.y, objectWhereToTp.transform.position.z);
-        other.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        other.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
         other.gameObject.GetComponent<MeshRenderer>().enabled = false;
-        other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-        animCam.Play("CameraSwitch");
+        rb.isKinematic = true;
+        sQte.CanTurn = true;
+        animCam.Play("CameraSink");
+       
         StartCoroutine(WaitForTimeScale(other));
     }
 
     IEnumerator WaitForTimeScale(Collider other)
     {
-        yield return new WaitForSecondsRealtime(1);
+        Rigidbody rb = other.GetComponent<Rigidbody>();
+        yield return new WaitForSecondsRealtime(2);
         other.gameObject.GetComponent<MeshRenderer>().enabled = true;
-        other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
-        other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-3, 3), 0, 0), ForceMode.Impulse);
+        rb.isKinematic = false;
     }
-    
-    
 }

@@ -11,10 +11,17 @@ public class Bumper : MonoBehaviour
     public Compteur cpt;
     public int pointsvalue = 200;
     [SerializeField] GameObject particlePrefab;
+    public bool isSushi = false;
+    public float strengthSushi = 1;
     
     private void OnCollisionEnter(Collision collision)
     {
         Vector3 force = -collision.contacts[0].normal * strength;
+        
+        if (isSushi)
+        {
+            force += new Vector3(strengthSushi,0,0);
+        }
         collision.rigidbody.AddForce(force);
         GameObject particuleInstance = Instantiate(particlePrefab, collision.contacts[0].point, Quaternion.identity, null);
         Destroy(particuleInstance, 1);
@@ -23,3 +30,4 @@ public class Bumper : MonoBehaviour
         cpt.UpdateScore(pointsvalue);
     }
 }
+
