@@ -10,31 +10,58 @@ public class ZoneCupScript : MonoBehaviour
     public Vector3 initialPosition = new Vector3();
     public GameObject ball;
     public Animation animCam;
-
-
+    public Rigidbody rbBall;
+    public TrailRenderer trail;
+    public Transform ballPos;
+    
+    void TeleportTrail()
+    {
+        trail.SetPositions(new Vector3[]{ballPos.position});
+    }
+    
     public void Start()
     {
         initialPosition = ball.transform.position;
     }
 
+    
+
     public void OnTriggerEnter(Collider other)
-    {
+    {   
+        Debug.Log("Collision");
         if (!isGreen)
         {
+            Debug.Log("Red");
             cpt.UpdateScore(-(cpt.currentValueCounter/2));
-            StartCoroutine(WaitForTpAfter());
         }
         else
         {
+            Debug.Log("Green");
             cpt.UpdateScore(cpt.currentValueCounter);
-            StartCoroutine(WaitForTpAfter());
+            
         }
+        Debug.Log(initialPosition);
+        trail.enabled = false;
+        Teleport();
+        StartCoroutine(WaitForTpAfter());
     }
 
     IEnumerator WaitForTpAfter()
     {
         yield return new WaitForSeconds(1);
-        ball.transform.position = initialPosition;
         animCam.Play("CameraSwitchAfter");
+        TeleportTrail();
+        trail.enabled = true;
     }
+
+    public void Teleport()
+    {
+        ball.transform.position = initialPosition;
+        rbBall.velocity = Vector3.zero;
+        rbBall.angularVelocity = Vector3.zero;
+    }
+    
+    
 }
+
+

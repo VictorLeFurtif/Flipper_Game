@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Collections;
 using UnityEngine;
 
 public class DeathZone : MonoBehaviour
@@ -20,7 +21,17 @@ public class DeathZone : MonoBehaviour
     public GameObject compteurText;
     public GameObject gameoverTextMax;
     public PlayerSaveScore pss;
+    public AudioLoadingTroughtScene aLoadinTscene;
+    public float newPitch = 0.5f;
+
+
+    public TrailRenderer trail;
+    public Transform ball;
     
+    void Teleport()
+    {
+        trail.SetPositions(new Vector3[]{ball.position});
+    }
     
     
     void OnTriggerEnter(Collider other)
@@ -30,6 +41,7 @@ public class DeathZone : MonoBehaviour
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
             other.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             other.transform.position = new Vector3(10.508f, 8.003f, 0.005f);
+            Teleport();
             ScreenShacker.instance.Shake(2,1);
             
             
@@ -61,9 +73,10 @@ public class DeathZone : MonoBehaviour
             buttonMenu.SetActive(true);
             buttonRestart.SetActive(true);
             vfx1.SetActive(false);
-            
-            
-            
+            aLoadinTscene.audioS.pitch = newPitch;
+
+
+
 
         }
         
