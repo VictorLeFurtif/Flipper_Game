@@ -16,12 +16,6 @@ public class LoadSceneGame : MonoBehaviour
       Debug.Log("Test");
       Time.timeScale = 1;
    }
-   public void LoadingScene()
-   {
-      SceneManager.LoadScene("Chargement");
-      Time.timeScale = 1;
-   }
-    
    
    public void LoadsMenuHelp()
    {
@@ -34,12 +28,16 @@ public class LoadSceneGame : MonoBehaviour
       Time.timeScale = 1;
         
    }
-
    
-
    public void QuittButton()
    {
       Application.Quit();
+   }
+
+   public void LoadSceneSkin()
+   {
+      SceneManager.LoadScene("SkinB");
+      Time.timeScale = 1;
    }
    
 }

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuHelpNew.unity
     guid: 6217553c386b813489c18dc68e36d543
+  - enabled: 1
+    path: Assets/Scenes/SkinB.unity
+    guid: 792ed12a4a2f12440b271b97145e73d9
   m_configObjects: {}

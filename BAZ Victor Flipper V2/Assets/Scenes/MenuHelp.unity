@@ -472,15 +472,23 @@ MonoBehaviour:
   damage: 1
   currentLife: 2
   heart1: {fileID: 0}
+  vfx1: {fileID: 0}
   heart2: {fileID: 0}
+  vfx2: {fileID: 0}
   heart3: {fileID: 0}
+  vfx3: {fileID: 0}
   bwFilter: {fileID: 0}
   gameOvertxt: {fileID: 0}
   buttonRestart: {fileID: 0}
   buttonMenu: {fileID: 0}
-  audio: {fileID: 0}
-  audio1: {fileID: 0}
-  sShake: {fileID: 0}
+  cpt: {fileID: 0}
+  compteurText: {fileID: 0}
+  gameoverTextMax: {fileID: 0}
+  pss: {fileID: 0}
+  aLoadinTscene: {fileID: 0}
+  newPitch: 0.5
+  trail: {fileID: 0}
+  ball: {fileID: 0}
 --- !u!65 &35895497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1268,10 +1276,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 1000
   anim: {fileID: 176353146}
-  audio: {fileID: 0}
+  audioClas: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 200
   particlePrefab: {fileID: 0}
+  isSushi: 0
+  strengthSushi: 1
 --- !u!4 &176353148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3342338530707967412, guid: 4996cb7e38e19d34f8d3c4c05aa9ad48,
@@ -1406,7 +1416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 500
   anim: {fileID: 198560949}
-  audio: {fileID: 0}
+  audioD: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 500
   particlePrefab: {fileID: 0}
@@ -3528,10 +3538,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 1000
   anim: {fileID: 445249397}
-  audio: {fileID: 0}
+  audioClas: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 200
   particlePrefab: {fileID: 0}
+  isSushi: 0
+  strengthSushi: 1
 --- !u!65 &445249396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3993,7 +4005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 500
   anim: {fileID: 519442083}
-  audio: {fileID: 0}
+  audioD: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 500
   particlePrefab: {fileID: 0}
@@ -4907,10 +4919,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 1000
   anim: {fileID: 786226297}
-  audio: {fileID: 0}
+  audioClas: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 200
   particlePrefab: {fileID: 0}
+  isSushi: 0
+  strengthSushi: 1
 --- !u!4 &786226299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3342338530707967412, guid: 4996cb7e38e19d34f8d3c4c05aa9ad48,
@@ -6370,6 +6384,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6943d0b6c2be22c4b9b8fc0b34c8835a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectWhereToTp: {fileID: 0}
+  animCam: {fileID: 0}
+  ball: {fileID: 0}
+  trail: {fileID: 0}
+  ballPos: {fileID: 0}
 --- !u!65 &1001182813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8517,7 +8536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 750
   anim: {fileID: 1569711589}
-  audio: {fileID: 0}
+  audioOG: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 100
   particlePrefab: {fileID: 0}
@@ -8991,10 +9010,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 1000
   anim: {fileID: 1625051726}
-  audio: {fileID: 0}
+  audioClas: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 200
   particlePrefab: {fileID: 0}
+  isSushi: 0
+  strengthSushi: 1
 --- !u!111 &1625051726
 Animation:
   m_ObjectHideFlags: 0
@@ -10413,7 +10434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 750
   anim: {fileID: 1957677859}
-  audio: {fileID: 0}
+  audioOG: {fileID: 0}
   cpt: {fileID: 0}
   pointsvalue: 100
   particlePrefab: {fileID: 0}
