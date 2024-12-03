@@ -9,6 +9,7 @@ public class menuManagerUI : MonoBehaviour
     void Start()
     {
         fondu.Fade();
+        
     }
 
     
