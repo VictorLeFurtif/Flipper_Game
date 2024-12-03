@@ -13,7 +13,6 @@ public class DeathZone : MonoBehaviour
     public GameObject vfx2;
     public GameObject heart3;
     public GameObject vfx3;
-    public GameObject bwFilter;
     public GameObject gameOvertxt;
     public GameObject buttonRestart;
     public GameObject buttonMenu;
@@ -64,7 +63,6 @@ public class DeathZone : MonoBehaviour
             pss.WhenDie();
             heart1.gameObject.SetActive((false));
             Destroy(other.gameObject);
-            bwFilter.SetActive(true);
             gameOvertxt.SetActive(true);
             gameOvertxt.GetComponent<TMP_Text>().text = "your score is : "+cpt.currentValueCounter;
             compteurText.SetActive(false);
