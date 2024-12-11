@@ -13,6 +13,10 @@ public class ZoneCupScript : MonoBehaviour
     public Rigidbody rbBall;
     public TrailRenderer trail;
     public Transform ballPos;
+    public GameObject goodVFX;
+    public GameObject badVFX;
+    public Vector3 positionCup = new Vector3();
+    public float delay = 10;
     
     void TeleportTrail()
     {
@@ -22,6 +26,7 @@ public class ZoneCupScript : MonoBehaviour
     public void Start()
     {
         initialPosition = ball.transform.position;
+        positionCup = transform.position;
     }
 
     
@@ -31,11 +36,15 @@ public class ZoneCupScript : MonoBehaviour
         Debug.Log("Collision");
         if (!isGreen)
         {
+            GameObject particuleInstance = Instantiate(badVFX, positionCup, Quaternion.identity);
             Debug.Log("Red");
             cpt.UpdateScore(-(cpt.currentValueCounter/2));
+            Destroy(particuleInstance, delay);
         }
         else
         {
+            GameObject particuleInstanceBis = Instantiate(goodVFX, positionCup, Quaternion.identity);
+            Destroy(particuleInstanceBis, delay);
             Debug.Log("Green");
             cpt.UpdateScore(cpt.currentValueCounter);
             

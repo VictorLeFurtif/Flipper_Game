@@ -12,6 +12,7 @@ public class Teleport : MonoBehaviour
     public TrailRenderer trail;
     public Transform ballPos;
     
+    
     void TeleportTrail()
     {
         trail.SetPositions(new Vector3[]{ballPos.position});

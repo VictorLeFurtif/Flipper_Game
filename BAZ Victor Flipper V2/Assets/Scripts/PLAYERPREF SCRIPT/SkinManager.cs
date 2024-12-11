@@ -8,8 +8,8 @@ public class SkinManager : MonoBehaviour
 {
     public GameObject textSkinDone;
     public GameObject textSkinNotDone;
-    
-    
+
+   
 
     public void SkinChangerTomato()
     {

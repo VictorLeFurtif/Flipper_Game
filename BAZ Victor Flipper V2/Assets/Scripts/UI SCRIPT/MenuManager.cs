@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
    public GameObject gVolume;
    public GameObject gVolumeMenu;
    public GameObject menuButton;
+   public GameObject restartButton;
    public bool menuInAction = false;
   
    public void OpenCloseMenu()
@@ -18,6 +19,7 @@ public class MenuManager : MonoBehaviour
          gVolumeMenu.SetActive(true);
          menuInAction = true;
          menuButton.SetActive(true);
+         restartButton.SetActive(true);
          Time.timeScale = 0;
       }
       else 
@@ -26,6 +28,7 @@ public class MenuManager : MonoBehaviour
          gVolumeMenu.SetActive(false);
          menuInAction = false;
          menuButton.SetActive(false);
+         restartButton.SetActive(false);
          Time.timeScale = 1;
       }
      
