@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using Unity.Collections;
 using UnityEngine;
@@ -20,9 +21,11 @@ public class DeathZone : MonoBehaviour
     public GameObject compteurText;
     public GameObject gameoverTextMax;
     public PlayerSaveScore pss;
-    public AudioLoadingTroughtScene aLoadinTscene;
+    public AudioSource loosingAudio;
+    public AudioSource loosingALifeAudio;
     public float newPitch = 0.5f;
-
+    public GameObject planeLifeLoose;
+    public GameObject planeGameLoose;
 
     public TrailRenderer trail;
     public Transform ball;
@@ -32,16 +35,29 @@ public class DeathZone : MonoBehaviour
         trail.SetPositions(new Vector3[]{ball.position});
     }
     
+    IEnumerator WaitForTrailReset()
+    {
+        yield return new WaitForSeconds(1); 
+        Teleport();
+        trail.enabled = true;
+        planeLifeLoose.SetActive(false);
+    }
+    
     
     void OnTriggerEnter(Collider other)
     {
+        
+        
         if (currentLife > 1 )
         {
+            planeLifeLoose.SetActive(true);
+            trail.enabled = false;
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
             other.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             other.transform.position = new Vector3(10.508f, 8.003f, 0.005f);
-            Teleport();
+            StartCoroutine(WaitForTrailReset());
             ScreenShacker.instance.Shake(2,1);
+            loosingALifeAudio.Play();
             
             
             
@@ -71,8 +87,9 @@ public class DeathZone : MonoBehaviour
             buttonMenu.SetActive(true);
             buttonRestart.SetActive(true);
             vfx1.SetActive(false);
-            aLoadinTscene.audioS.pitch = newPitch;
-
+            loosingAudio.Play();
+            ScreenShacker.instance.Shake(2,1);
+            planeGameLoose.SetActive(true);
 
 
 

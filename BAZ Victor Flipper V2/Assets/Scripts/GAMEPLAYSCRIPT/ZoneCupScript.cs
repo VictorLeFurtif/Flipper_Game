@@ -17,6 +17,7 @@ public class ZoneCupScript : MonoBehaviour
     public GameObject badVFX;
     public Vector3 positionCup = new Vector3();
     public float delay = 10;
+    public AudioSource winOrloose;
     
     void TeleportTrail()
     {
@@ -40,6 +41,7 @@ public class ZoneCupScript : MonoBehaviour
             Debug.Log("Red");
             cpt.UpdateScore(-(cpt.currentValueCounter/2));
             Destroy(particuleInstance, delay);
+            winOrloose.Play();
         }
         else
         {
@@ -47,6 +49,7 @@ public class ZoneCupScript : MonoBehaviour
             Destroy(particuleInstanceBis, delay);
             Debug.Log("Green");
             cpt.UpdateScore(cpt.currentValueCounter);
+            winOrloose.Play();
             
         }
         Debug.Log(initialPosition);
